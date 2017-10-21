@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "Welcome To Pokemon!"
+def root():
+    return render_template('index.html'), 200
 
 @app.route('/status/<currstatus>')
 
